@@ -11,7 +11,7 @@ public class CreatingStreams {
 		//1. Create a stream out of the following collections.
 		String[] strArr = {"one", "two", "three", "four"};
 		
-		Stream.of(strArr);
+		Stream<String> strEam = Stream.of(strArr);
 		
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 		intList.add(1);
@@ -19,7 +19,7 @@ public class CreatingStreams {
 		intList.add(3);
 		intList.add(4);
 		
-		Stream.of(intList);
+		Stream<Integer> intStream = intList.stream();
 		
 		Stack<Random> randStack = new Stack<Random>();
 		randStack.push(new Random());
@@ -27,12 +27,14 @@ public class CreatingStreams {
 		randStack.push(new Random());
 		randStack.push(new Random());
 		
-		Stream.of(randStack);
+		Stream<Random> randStream = randStack.stream();
 		
 		ArrayDeque<Double> dQueue = new ArrayDeque<Double>();
 		dQueue.push(0.0);
 		dQueue.push(1.0);
 		dQueue.push(2.0);
 		dQueue.push(3.0);
+		
+		Stream<Double> doubStream = dQueue.stream();
 	}
 }
